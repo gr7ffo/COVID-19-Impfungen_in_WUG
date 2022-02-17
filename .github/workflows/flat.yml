@@ -15,3 +15,8 @@ jobs:
           deno-version: v1.10.x
       - name: Check out repo
         uses: actions/checkout@v2
+      - name: Fetch data
+        uses: githubocto/flat@v3
+        with:
+          http_url: https://raw.githubusercontent.com/robert-koch-institut/COVID-19-Impfungen_in_Deutschland/master/Aktuell_Deutschland_Landkreise_COVID-19-Impfungen.csv
+          downloaded_filename: Aktuell_Deutschland_Landkreise_COVID-19-Impfungen.csv
