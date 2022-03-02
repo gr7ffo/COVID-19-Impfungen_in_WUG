@@ -31,3 +31,4 @@ jobs:
         run: |
           git add stacked-bars.png daily-counts.png daily-numbers.png
           git commit -a --allow-empty-message -m ''
+          git push origin master
