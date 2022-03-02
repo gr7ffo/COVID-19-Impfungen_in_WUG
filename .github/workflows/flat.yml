@@ -27,3 +27,7 @@ jobs:
       - name: Generate plots
         run: |
           python generate_plots.py
+      - name: Commit new plots
+        run: |
+          git add stacked-bars.png daily-counts.png daily-numbers.png
+          git commit -a --allow-empty-message -m ''
