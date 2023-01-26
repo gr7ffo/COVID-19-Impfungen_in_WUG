@@ -5,7 +5,7 @@ import plotly.express as px
 # Get data from RKI Github
 impfungen = pd.read_csv("Aktuell_Deutschland_Landkreise_COVID-19-Impfungen.csv", low_memory=False)
 # https://datengui.de/statistik-erklaert/ags
-ags = '09577'  # NM: 09373, WUG: 09577
+ags = 9577  # NM: 9373, WUG: 9577
 # Create dataframe
 df = impfungen.loc[impfungen["LandkreisId_Impfort"] == ags].groupby(['Impfdatum', 'Impfschutz', 'Altersgruppe'], as_index=False).sum()
 # Get latest datum
